@@ -9,5 +9,5 @@
 | Repository                                                                                | Description                                               |
 |-------------------------------------------------------------------------------------------|-----------------------------------------------------------|
 | [cloudadder-cdk-constructs](https://github.com/cloudadder/cloudadder-cdk-constructs) | CloudAdder CDK Constructs     |
-| [cloudadder-cdk-constructs-sandpit](https://github.com/cloudadder/cloudadder-cdk-constructs-sandpit) | CloudAdder CDK Constructs Testing Sandpit - consumes the constructs     |
+| [cloudadder-cdk-constructs-sandpit](https://github.com/cloudadder/cloudadder-cdk-constructs-sandpit) | CloudAdder CDK Constructs testing sandpit - consumes the constructs     |
 
