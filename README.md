@@ -4,7 +4,7 @@
 
 # @cloudadder/cloudadder-cdk-constructs
 
-[![Build Status](https://github.com/cloudadder/cloudadder-cdk-constructs/workflows/Build/badge.svg)](https://github.com/cloudadder/cloudadder-cdk-constructs/actions?query=workflow=Build)
+[![Build Status](https://github.com/cloudadder/cloudadder-cdk-constructs/actions/workflows/Build/badge.svg)](https://github.com/cloudadder/cloudadder-cdk-constructs/actions?query=workflow=Build)
 [![projen](https://img.shields.io/badge/buildtool-projen-blue.svg)](https://github.com/projen/projen)
 [![typescript](https://img.shields.io/badge/jsii-typescript-blueviolet.svg)](https://www.npmjs.com/~cloudadder?activeTab=packages)
 
