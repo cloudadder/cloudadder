@@ -1,4 +1,4 @@
-![cloudadder](cloudadder_logo.png "cloudadder")
+![cloudadder](cloudadder_logo_small.png "cloudadder")
 
 [![Build Status](https://github.com/cloudadder/cloudadder-cdk-constructs/actions/workflows/build/badge.svg)](https://github.com/cloudadder/cloudadder-cdk-constructs/actions?query=workflow=Build)
 [![projen](https://img.shields.io/badge/buildtool-projen-blue.svg)](https://github.com/projen/projen)
@@ -6,14 +6,8 @@
 
 > A collection of higher-level reusable [cdk constructs](https://github.com/awslabs/aws-cdk)
 
-## Constructs
-
 | Repository                                                                                | Description                                               |
 |-------------------------------------------------------------------------------------------|-----------------------------------------------------------|
 | [cloudadder-cdk-constructs](https://github.com/cloudadder/cloudadder-cdk-constructs) | CloudAdder CDK Constructs     |
-| [cloudadder-cdk-constructs-sandpit](https://github.com/cloudadder/cloudadder-cdk-constructs-sandpit) | CloudAdder CDK Constructs Testing Sandpit - That consumes the constructs     |
-
-## Contributing
-
-We welcome community contributions and pull requests.
+| [cloudadder-cdk-constructs-sandpit](https://github.com/cloudadder/cloudadder-cdk-constructs-sandpit) | CloudAdder CDK Constructs Testing Sandpit - consumes the constructs     |
 
