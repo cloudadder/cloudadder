@@ -1,6 +1,6 @@
 ![cloudadder](cloudadder_logo_small.png "cloudadder")
 
-[![Build-Release Status](https://github.com/cloudadder/cloudadder-cdk-constructs/actions/workflows/Release/badge.svg)](https://github.com/cloudadder/cloudadder-cdk-constructs/actions?query=workflow=Build)
+[![build-release status](https://github.com/cloudadder/cloudadder-cdk-constructs/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/cloudadder/cloudadder-cdk-constructs/actions/workflows/release.yml)
 [![projen](https://img.shields.io/badge/buildtool-projen-blue.svg)](https://github.com/projen/projen)
 [![typescript](https://img.shields.io/badge/jsii-typescript-blueviolet.svg)](https://www.npmjs.com/~cloudadder?activeTab=packages)
 
