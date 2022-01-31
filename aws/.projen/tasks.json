@@ -5,9 +5,6 @@
       "description": "Full release build",
       "steps": [
         {
-          "spawn": "default"
-        },
-        {
           "spawn": "pre-compile"
         },
         {
@@ -24,13 +21,9 @@
         }
       ]
     },
-    "build:infra": {
-      "name": "build:infra",
-      "steps": [
-        {
-          "exec": "cd aws && npm run build"
-        }
-      ]
+    "bundle": {
+      "name": "bundle",
+      "description": "Prepare assets"
     },
     "clobber": {
       "name": "clobber",
@@ -66,12 +59,7 @@
     },
     "compile": {
       "name": "compile",
-      "description": "Only compile",
-      "steps": [
-        {
-          "exec": "tsc --build"
-        }
-      ]
+      "description": "Only compile"
     },
     "default": {
       "name": "default",
@@ -79,6 +67,33 @@
       "steps": [
         {
           "exec": "node .projenrc.js"
+        }
+      ]
+    },
+    "deploy": {
+      "name": "deploy",
+      "description": "Deploys your CDK app to the AWS cloud",
+      "steps": [
+        {
+          "exec": "cdk deploy"
+        }
+      ]
+    },
+    "destroy": {
+      "name": "destroy",
+      "description": "Destroys your cdk app in the AWS cloud",
+      "steps": [
+        {
+          "exec": "cdk destroy"
+        }
+      ]
+    },
+    "diff": {
+      "name": "diff",
+      "description": "Diffs the currently deployed app against your code",
+      "steps": [
+        {
+          "exec": "cdk diff"
         }
       ]
     },
@@ -94,30 +109,18 @@
         }
       ]
     },
-    "eslint": {
-      "name": "eslint",
-      "description": "Runs eslint against the codebase",
-      "steps": [
-        {
-          "exec": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern src test build-tools .projenrc.js"
-        }
-      ]
-    },
-    "install:infra": {
-      "name": "install:infra",
-      "steps": [
-        {
-          "exec": "cd aws && npm install"
-        }
-      ]
-    },
     "package": {
       "name": "package",
       "description": "Creates the distribution package"
     },
     "post-compile": {
       "name": "post-compile",
-      "description": "Runs after successful compilation"
+      "description": "Runs after successful compilation",
+      "steps": [
+        {
+          "spawn": "synth:silent"
+        }
+      ]
     },
     "post-upgrade": {
       "name": "post-upgrade",
@@ -127,19 +130,21 @@
       "name": "pre-compile",
       "description": "Prepare the project for compilation"
     },
-    "start": {
-      "name": "start",
+    "synth": {
+      "name": "synth",
+      "description": "Synthesizes your cdk app into cdk.out",
       "steps": [
         {
-          "exec": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/cli.ts"
+          "exec": "cdk synth"
         }
       ]
     },
-    "synth:infra": {
-      "name": "synth:infra",
+    "synth:silent": {
+      "name": "synth:silent",
+      "description": "Synthesizes your cdk app into cdk.out and suppresses the template in stdout (part of \"yarn build\")",
       "steps": [
         {
-          "exec": "cd aws && npx cdk synth"
+          "exec": "cdk synth > /dev/null"
         }
       ]
     },
@@ -149,9 +154,6 @@
       "steps": [
         {
           "exec": "jest --passWithNoTests --all --updateSnapshot"
-        },
-        {
-          "spawn": "eslint"
         }
       ]
     },
@@ -199,7 +201,7 @@
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint jest jest-junit json-schema nodemon npm-check-updates prettier ts-jest ts-node typescript"
+          "exec": "yarn upgrade @types/jest @types/node aws-cdk esbuild jest jest-junit npm-check-updates ts-jest ts-node typescript aws-cdk-lib constructs"
         },
         {
           "exec": "npx projen"
@@ -247,18 +249,13 @@
     },
     "watch": {
       "name": "watch",
-      "description": "Watch & compile in the background",
+      "description": "Watches changes in your source code and rebuilds and deploys to the current account",
       "steps": [
         {
-          "exec": "tsc --build -w"
-        }
-      ]
-    },
-    "watchserver": {
-      "name": "watchserver",
-      "steps": [
+          "exec": "cdk deploy --hotswap"
+        },
         {
-          "exec": "nodemon --ignore test/ --watch src -e ts,tsx --exec ts-node src/cli.ts"
+          "exec": "cdk watch"
         }
       ]
     }
