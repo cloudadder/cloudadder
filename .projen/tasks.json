@@ -24,6 +24,14 @@
         }
       ]
     },
+    "build:install": {
+      "name": "build:install",
+      "steps": [
+        {
+          "exec": "npm run build && npm i -g --force && cloudadder"
+        }
+      ]
+    },
     "bump": {
       "name": "bump",
       "description": "Bumps version based on latest git tag and generates a changelog entry",
@@ -94,14 +102,6 @@
       "steps": [
         {
           "spawn": "default"
-        }
-      ]
-    },
-    "install-global": {
-      "name": "install-global",
-      "steps": [
-        {
-          "exec": "npm i -g && cloudadder"
         }
       ]
     },

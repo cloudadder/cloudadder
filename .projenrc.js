@@ -1,18 +1,23 @@
-import { awscdk, javascript } from "projen";
+import { awscdk, javascript } from 'projen';
 
 const project = new javascript.NodeProject({
-  defaultReleaseBranch: "main",
-  name: "cloudadder",
-  devDeps: ["chalk", "clear", "figlet"],
-  entrypoint: "index.js",
+  author: 'cloudadder',
+  authorAddress: 'cloudadder.com@gmail.com',
   bin: {
-    "cloudadder": "./index.js"
+    'cloudadder': './index.js'
   },
+  defaultReleaseBranch: 'main',
+  devDeps: ['chalk', 'clear', 'figlet'],
+  entrypoint: 'index.js',
+  homepage: 'https://cloudadder.com',
+  name: '@cloudadder/cloudadder',
+  npmAccess: 'public',
+  repositoryUrl: 'https://github.com/cloudadder/cloudadder.git',
   scripts: {
-    "install-global": "npm i -g && cloudadder",
+    'build:install': 'npm run build && npm i -g --force && cloudadder',
   },
 });
 
-project.addFields({"type": "module"});
+project.addFields({'type': 'module'});
   
 project.synth();

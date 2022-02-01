@@ -1,16 +1,16 @@
 {
-  "name": "cloudadder",
+  "name": "@cloudadder/cloudadder",
   "bin": {
     "cloudadder": "./index.js"
   },
   "scripts": {
     "build": "npx projen build",
+    "build:install": "npx projen build:install",
     "bump": "npx projen bump",
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
     "default": "npx projen default",
     "eject": "npx projen eject",
-    "install-global": "npx projen install-global",
     "package": "npx projen package",
     "post-compile": "npx projen post-compile",
     "post-upgrade": "npx projen post-upgrade",
@@ -36,6 +36,10 @@
   },
   "main": "index.js",
   "license": "Apache-2.0",
+  "homepage": "https://cloudadder.com",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.0",
   "jest": {
     "clearMocks": true,
