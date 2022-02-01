@@ -9,7 +9,7 @@ const project = new javascript.NodeProject({
   defaultReleaseBranch: 'main',
   devDeps: ['chalk', 'clear', 'figlet'],
   entrypoint: 'index.js',
-  homepage: 'https://cloudadder.com',
+  homepage: 'http://cloudadder.com',
   name: '@cloudadder/cloudadder',
   npmAccess: 'public',
   repositoryUrl: 'https://github.com/cloudadder/cloudadder.git',
