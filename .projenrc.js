@@ -1,12 +1,18 @@
-const { NodeProject } = require("projen");
-const project = new NodeProject({
+import { awscdk, javascript } from "projen";
+
+const project = new javascript.NodeProject({
   defaultReleaseBranch: "main",
   name: "cloudadder",
-
-  // deps: [],                /* Runtime dependencies of this module. */
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],             /* Build dependencies for this module. */
-  // packageName: undefined,  /* The "name" in package.json. */
-  // release: undefined,      /* Add release management to this project. */
+  devDeps: ["chalk", "clear", "figlet"],
+  entrypoint: "index.js",
+  bin: {
+    "cloudadder": "./index.js"
+  },
+  scripts: {
+    "install-global": "npm i -g && cloudadder",
+  },
 });
+
+project.addFields({"type": "module"});
+  
 project.synth();

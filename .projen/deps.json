@@ -1,17 +1,29 @@
 {
   "dependencies": [
     {
+      "name": "chalk",
+      "type": "build"
+    },
+    {
+      "name": "clear",
+      "type": "build"
+    },
+    {
+      "name": "figlet",
+      "type": "build"
+    },
+    {
       "name": "jest",
       "type": "build"
     },
     {
       "name": "jest-junit",
-      "version": "^12",
+      "version": "^13",
       "type": "build"
     },
     {
       "name": "npm-check-updates",
-      "version": "^11",
+      "version": "^12",
       "type": "build"
     },
     {
