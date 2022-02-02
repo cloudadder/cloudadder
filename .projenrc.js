@@ -10,7 +10,7 @@ const project = new javascript.NodeProject({
   devDeps: ['chalk', 'clear', 'figlet'],
   entrypoint: 'index.js',
   homepage: 'http://cloudadder.com',
-  name: '@cloudadder/cloudadder',
+  name: 'cloudadder',
   npmAccess: 'public',
   repositoryUrl: 'https://github.com/cloudadder/cloudadder.git',
   scripts: {
