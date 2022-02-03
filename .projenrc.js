@@ -14,7 +14,7 @@ const project = new javascript.NodeProject({
   npmAccess: 'public',
   repositoryUrl: 'https://github.com/cloudadder/cloudadder.git',
   scripts: {
-    'build:install': 'npm run build && npm i -g --force && cloudadder',
+    'build-install': 'npm run build && npm i -g --force && cloudadder',
   },
 });
 

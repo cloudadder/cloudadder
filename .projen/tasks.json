@@ -24,8 +24,8 @@
         }
       ]
     },
-    "build:install": {
-      "name": "build:install",
+    "build-install": {
+      "name": "build-install",
       "steps": [
         {
           "exec": "npm run build && npm i -g --force && cloudadder"

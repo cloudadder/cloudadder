@@ -5,7 +5,7 @@
   },
   "scripts": {
     "build": "npx projen build",
-    "build:install": "npx projen build:install",
+    "build-install": "npx projen build-install",
     "bump": "npx projen bump",
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
