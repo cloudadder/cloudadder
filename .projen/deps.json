@@ -9,6 +9,10 @@
       "type": "build"
     },
     {
+      "name": "enquirer",
+      "type": "build"
+    },
+    {
       "name": "figlet",
       "type": "build"
     },

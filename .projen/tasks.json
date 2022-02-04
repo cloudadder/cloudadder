@@ -221,7 +221,7 @@
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade chalk clear figlet jest jest-junit npm-check-updates standard-version"
+          "exec": "yarn upgrade chalk clear enquirer figlet jest jest-junit npm-check-updates standard-version"
         },
         {
           "exec": "npx projen"

@@ -27,6 +27,7 @@
   "devDependencies": {
     "chalk": "*",
     "clear": "^0.1.0",
+    "enquirer": "^2.3.6",
     "figlet": "^1.5.2",
     "jest": "^27.4.7",
     "jest-junit": "^13",
