@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/cloudadder/cloudadder/blob/main/cloudadder_logo_2.png" />
+  <img src="https://github.com/cloudadder/cloudadder/blob/main/images/cloudadder_logo_2.png" />
 </p>
 
 | Repository | Description|Build|
